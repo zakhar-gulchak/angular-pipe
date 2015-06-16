@@ -15,9 +15,9 @@ UI/UX
 Try creating something simple, user friendly and eye appealing. Feel free to use any UI resources you’d like to achieve that. For example you could use Twitter Bootstrap, or any other UI library.
 
 Architecture & Libraries
-Design your application anyway you want. Please do not use any libraries, only plain vanilla JS.
+Design your application anyway you want. Please use AngularJS.
 
 Backend
 None. We should be able to run the exercise, just by opening your index.html file.
 
-Application is aviable on http://enigmatic-headland-6087.herokuapp.com/
+Application is available on http://aqueous-lowlands-1831.herokuapp.com/
