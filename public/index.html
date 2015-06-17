@@ -25,13 +25,13 @@
 <!-- SET THE CONTROLLER AND GET ALL NEWS -->
 <body ng-controller="mainController">
     <div class="container">
-        <!-- HEADER AND TODO COUNT -->
+        <!-- HEADER AND ARTICLES COUNT -->
         <div class="jumbotron text-center">
             <h1>There are <span class="label label-info">{{ count }}</span> articles</h1>
         </div>
         <div class="row">
             <div class="col-sm-4 col-sm-offset-4">
-                <!-- LOOP OVER THE TODOS IN $scope.todos -->
+                <!-- LOOP OVER THE ARTICLES IN $scope.articles -->
                 <ul class="list-group articles-list">
                     <li class="list-group-item" ng-repeat="article in articles">
                         <div class="article-main-info" ng-click="showDetails = ! showDetails">
