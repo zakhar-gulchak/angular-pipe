@@ -5,7 +5,8 @@
 <head>
     <!-- META -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Optimize mobile viewport -->
 
     <title>Node/Angular Pipeline App</title>
 
@@ -19,33 +20,35 @@
     </style>
 
     <!-- SPELLS -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script><!-- load angular -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    <!-- load angular -->
     <script src="js/core.js"></script>
+    <script src="js/services.js"></script>
 </head>
 <!-- SET THE CONTROLLER AND GET ALL NEWS -->
 <body ng-controller="mainController">
-    <div class="container">
-        <!-- HEADER AND ARTICLES COUNT -->
-        <div class="jumbotron text-center">
-            <h1>There are <span class="label label-info">{{ count }}</span> articles</h1>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 col-sm-offset-4">
-                <!-- LOOP OVER THE ARTICLES IN $scope.articles -->
-                <ul class="list-group articles-list">
-                    <li class="list-group-item" ng-repeat="article in articles">
-                        <div class="article-main-info" ng-click="showDetails = ! showDetails">
-                            <h3>{{ article.title }}</h3>
-                            <img src="{{ article.enclosure.url }}" />
-                        </div>
-                        <div ng-show="showDetails">
-                            <div>{{ article.description }}</div>
-                            <div>Link: <a href="{{ article.link }}">{{ article.link }}</a></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+<div class="container">
+    <!-- HEADER AND ARTICLES COUNT -->
+    <div class="jumbotron text-center">
+        <h1>There are <span class="label label-info">{{ articles.length }}</span> articles</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <!-- LOOP OVER THE ARTICLES IN $scope.articles -->
+            <ul class="list-group articles-list">
+                <li class="list-group-item" ng-repeat="article in articles">
+                    <div class="article-main-info" ng-click="showDetails = ! showDetails">
+                        <h3>{{ article.title }}</h3>
+                        <img src="{{ article.enclosure.url }}"/>
+                    </div>
+                    <div ng-show="showDetails">
+                        <div>{{ article.description }}</div>
+                        <div>Link: <a href="{{ article.link }}">{{ article.link }}</a></div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
+</div>
 </body>
 </html>
